@@ -8,9 +8,9 @@ public class OpacityButton : MonoBehaviour, IOpacityable
     public bool IsOpacity { set { isOpacity = value; } }
 
     [SerializeField]
-    public Opacity opacity = Opacity.NONE; //Уровень непрозрачности
+    public Opacity opacity = Opacity.NONE; //РЈСЂРѕРІРµРЅСЊ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё
     [SerializeField]
-    bool isOpacity; //Флаг установки непрозрачности
+    bool isOpacity; //Р¤Р»Р°Рі СѓСЃС‚Р°РЅРѕРІРєРё РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё
 
     [SerializeField]
     public GameObject defaultImage;
@@ -27,9 +27,9 @@ public class OpacityButton : MonoBehaviour, IOpacityable
         throw new System.NotImplementedException();
     }
 
-    //Установка прозрачности
+    //РЈСЃС‚Р°РЅРѕРІРєР° РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё
     public void SetOpacity(){
-        //Непрозрачность уже установлена
+        //РќРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ СѓР¶Рµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР°
         if (isOpacity) { return; } 
         
         defaultImage.SetActive(false);
@@ -38,11 +38,11 @@ public class OpacityButton : MonoBehaviour, IOpacityable
         FiguresManager.currentOpacity = opacity;
         GameObject[] opacityButtons = GameObject.FindGameObjectsWithTag("OpacityButton");
 
-        //Переключение кнопок
+        //РџРµСЂРµРєР»СЋС‡РµРЅРёРµ РєРЅРѕРїРѕРє
         foreach (GameObject button in opacityButtons)
         {
              if (button == this.gameObject) { continue; }
-             //Отключаем флаг прозрачности
+             //РћС‚РєР»СЋС‡Р°РµРј С„Р»Р°Рі РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё
              button.GetComponent<OpacityButton>().IsOpacity = false;
              button.GetComponent<OpacityButton>().defaultImage.SetActive(true);
              button.GetComponent<OpacityButton>().activeImage.SetActive(false);
@@ -52,7 +52,7 @@ public class OpacityButton : MonoBehaviour, IOpacityable
         FigureField[] figureFieldContainer = 
             GameObject.Find("FigureFields").GetComponentsInChildren<FigureField>();
 
-        //Изменение прозрачности объектов
+        //РР·РјРµРЅРµРЅРёРµ РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё РѕР±СЉРµРєС‚РѕРІ
         foreach (FigureField figureField in figureFieldContainer)
         {
             figureField.ToggleFigure(opacity);
@@ -61,5 +61,3 @@ public class OpacityButton : MonoBehaviour, IOpacityable
     }
 
 }
-
-
