@@ -21,10 +21,7 @@ public class FigureField : MonoBehaviour,IToggleable
 
         if (toggle.isOn)
         {
-
             color.a = Normalize(opacity);
-
-
         }
         else {
             color.a = 1;
@@ -62,7 +59,6 @@ public class FigureField : MonoBehaviour,IToggleable
     //Вызывается через кнопку переключения прозрачности наверху сцены
     public void ToggleFigure(bool toggleEnabled)
     {
-
         //Если кнопка ToggleOpacityTop нажата и текущая кнопка не нажата
         if (!toggle.isOn && toggleEnabled)
         {
