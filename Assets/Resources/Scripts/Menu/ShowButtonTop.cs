@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class ShowButtonTop : MonoBehaviour, IToggleable
 {
-    //Контейнер где находятся 3D-объекты
+    //РљРѕРЅС‚РµР№РЅРµСЂ РіРґРµ РЅР°С…РѕРґСЏС‚СЃСЏ 3D-РѕР±СЉРµРєС‚С‹
     [SerializeField]
     GameObject figureFields;
-    //Скрипт фигуры
+    //РЎРєСЂРёРїС‚ С„РёРіСѓСЂС‹
     Figure[] figures;
     [SerializeField]
     GameObject showButton;
@@ -22,7 +22,7 @@ public class ShowButtonTop : MonoBehaviour, IToggleable
         showButton.SetActive(!isClicked);
         isClicked = !isClicked;
 
-        //Показываем/скрываем все объекты
+        //РџРѕРєР°Р·С‹РІР°РµРј/СЃРєСЂС‹РІР°РµРј РІСЃРµ РѕР±СЉРµРєС‚С‹
         foreach (FigureField figureField in figureFields.GetComponentsInChildren<FigureField>()) 
         {
             figureField.GetAttachedFigure().SetActive(!isClicked);
@@ -42,17 +42,6 @@ public class ShowButtonTop : MonoBehaviour, IToggleable
 
     public void ToggleFigure(bool enable)
     {
-
-        //Кнопка EyeTop нажата и кнопка элемента FigureField нажата
-        /*   if (isClicked && enable)
-           {
-               hideButton.SetActive(enable);
-               showButton.SetActive(!enable);
-           } 
-
-        hideButton.SetActive(enable);
-        showButton.SetActive(!enable);
-
-        isClicked = !isClicked; */
+        throw new System.NotImplementedException();
     }
 }
