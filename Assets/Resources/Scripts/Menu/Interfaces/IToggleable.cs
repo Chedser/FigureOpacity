@@ -1,8 +1,9 @@
 
-//Интерфейс для переключения прозрачности объектов
+
 using UnityEngine;
 using UnityEngine.UI;
 
+//РРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё РѕР±СЉРµРєС‚РѕРІ
 public interface IToggleable
 {
     public void ToggleFigure();
