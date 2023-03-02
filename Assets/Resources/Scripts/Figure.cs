@@ -1,7 +1,5 @@
 using UnityEngine;
 
-
-
 //Фигура
 public class Figure : MonoBehaviour
 {
