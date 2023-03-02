@@ -10,7 +10,6 @@ public class Figure : MonoBehaviour
 
     //Получить русское название фигуры
     public string GetRussianNaming() {
-
         string figureType = "";
 
         switch (type){
