@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ShowButtonClick : MonoBehaviour
 {
-    //Передаем сюда кнопку, на которой расположен этот скрипт
+    //РџРµСЂРµРґР°РµРј СЃСЋРґР° РєРЅРѕРїРєСѓ, РЅР° РєРѕС‚РѕСЂРѕР№ СЂР°СЃРїРѕР»РѕР¶РµРЅ СЌС‚РѕС‚ СЃРєСЂРёРїС‚
     public void ToggleShowButton(GameObject showButton)
     {
         IToggleable itogglable = showButton.GetComponent<IToggleable>();
