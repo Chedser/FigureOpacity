@@ -13,7 +13,6 @@ public class FigureField : MonoBehaviour,IToggleable
         toggle = GetComponentInChildren<Toggle>();
         attachedFigure = figure;
     }
-
     
     public void ToggleFigure(Opacity opacity) {
 
