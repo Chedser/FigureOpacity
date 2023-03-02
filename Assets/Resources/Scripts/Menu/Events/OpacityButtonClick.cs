@@ -1,6 +1,6 @@
 using UnityEngine;
 
-//Кнопка прозрачности
+//РљРЅРѕРїРєР° РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё
 public class OpacityButtonClick : MonoBehaviour, IOpacityable
 {
     public void SetOpacity(GameObject button)
