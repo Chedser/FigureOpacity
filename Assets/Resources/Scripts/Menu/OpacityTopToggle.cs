@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-//Верхний чекбокс, который переключает прозрачность у всех 3D-объектов
+//Р’РµСЂС…РЅРёР№ С‡РµРєР±РѕРєСЃ, РєРѕС‚РѕСЂС‹Р№ РїРµСЂРµРєР»СЋС‡Р°РµС‚ РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ Сѓ РІСЃРµС… 3D-РѕР±СЉРµРєС‚РѕРІ
 public class OpacityTopToggle : MonoBehaviour, IToggleable
 {
-    //Контейнер где находятся 3D-объекты
+    //РљРѕРЅС‚РµР№РЅРµСЂ РіРґРµ РЅР°С…РѕРґСЏС‚СЃСЏ 3D-РѕР±СЉРµРєС‚С‹
     [SerializeField]
     GameObject figureFields;
     public void ToggleFigure()
@@ -19,7 +19,7 @@ public class OpacityTopToggle : MonoBehaviour, IToggleable
 
     public void ToggleFigure(Toggle toggle)
     {
-        //Показываем/скрываем все объекты
+        //РџРѕРєР°Р·С‹РІР°РµРј/СЃРєСЂС‹РІР°РµРј РІСЃРµ РѕР±СЉРµРєС‚С‹
         foreach (FigureField figureField in figureFields.GetComponentsInChildren<FigureField>())
         {
             figureField.ToggleFigure(toggle.isOn);
@@ -29,8 +29,6 @@ public class OpacityTopToggle : MonoBehaviour, IToggleable
 
     public void ToggleFigure(bool opacityTopToggle)
     {
-        /* if ((opacityTopToggle && isClicked) || (!opacityTopToggle && !isClicked)) { return; }
-
-        isClicked = !isClicked; */
+         throw new System.NotImplementedException();
     }
 }
