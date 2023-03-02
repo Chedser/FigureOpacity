@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Чекбокс на элементе меню FigureField, где метяется прозрачность
+//Р§РµРєР±РѕРєСЃ РЅР° СЌР»РµРјРµРЅС‚Рµ РјРµРЅСЋ FigureField, РіРґРµ РјРµРЅСЏРµС‚СЃСЏ РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ
 public class FigureFieldToggle : MonoBehaviour, IToggleable
 {
 
@@ -18,16 +18,16 @@ public class FigureFieldToggle : MonoBehaviour, IToggleable
         throw new System.NotImplementedException();
     }
 
-    //Изменение прозрачности объекта
+    //РР·РјРµРЅРµРЅРёРµ РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё РѕР±СЉРµРєС‚Р°
     public void ToggleFigure(Toggle toggle){
         attachedFigure = toggle.gameObject.GetComponentInParent<FigureField>().GetAttachedFigure();
         
-        //Выход, если фигура неактивна
+        //Р’С‹С…РѕРґ, РµСЃР»Рё С„РёРіСѓСЂР° РЅРµР°РєС‚РёРІРЅР°
         if (!attachedFigure.activeInHierarchy) { return; }
         Material mat = attachedFigure.GetComponent<Renderer>().material;
         Color color = mat.color;
         
-        //Меняем прозрачность
+        //РњРµРЅСЏРµРј РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ
         if (toggle.isOn)
         {
             color.a = Normalize(FiguresManager.currentOpacity);
@@ -37,7 +37,7 @@ public class FigureFieldToggle : MonoBehaviour, IToggleable
 
     }
 
-    //Преобразование значения непрозрачности в диапазон 0-1
+    //РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё РІ РґРёР°РїР°Р·РѕРЅ 0-1
     float Normalize(Opacity opacity)
     {
         string val = ((opacity - Opacity.ONE) / ((float)(Opacity.FIVE - Opacity.ONE))).ToString();
@@ -48,9 +48,8 @@ public class FigureFieldToggle : MonoBehaviour, IToggleable
         return result;
     }
 
-    //Вызывается через OpacityTopToggle
     public void ToggleFigure(bool enable)
     {
- 
+        throw new System.NotImplementedException();
     }
 }
