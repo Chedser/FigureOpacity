@@ -26,7 +26,6 @@ public class ShowButton : MonoBehaviour, IToggleable
         hideButton.SetActive(isClicked);
         showButton.SetActive(!isClicked);
         figureField.GetComponentInParent<FigureField>().GetAttachedFigure().SetActive(isClicked);
-        //showButtonTop.GetComponent<IToggleable>().ToggleFigure(isClicked);
         isClicked = !isClicked;
 
     }
