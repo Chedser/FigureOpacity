@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FiguresManager : MonoBehaviour
 {
 
-    const int MAX_FIGURES_COUNT = 7; //маскимальное количество фигур в сцене
+    const int MAX_FIGURES_COUNT = 7; //Максимальное количество фигур в сцене
 
     public static Opacity currentOpacity; // Текущая непрозрачность
 
