@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class ShowButtonTopClick : MonoBehaviour
 {
-    
-    //Передаем сюда кнопку, на которой расположен этот скрипт
+      //Передаем сюда кнопку, на которой расположен этот скрипт
     public void ToggleShowButtonTop(GameObject showButtonTop)
     {
         IToggleable itogglable = showButtonTop.GetComponent<IToggleable>();
