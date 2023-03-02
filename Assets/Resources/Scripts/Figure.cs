@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 
-//Фигура
+//Р¤РёРіСѓСЂР°
 public class Figure : MonoBehaviour
 {
     public FigureType Type{get{return type;}}
@@ -10,16 +10,16 @@ public class Figure : MonoBehaviour
     [SerializeField]
     FigureType type = FigureType.None;
 
-    //Получить русское название фигуры
+    //РџРѕР»СѓС‡РёС‚СЊ СЂСѓСЃСЃРєРѕРµ РЅР°Р·РІР°РЅРёРµ С„РёРіСѓСЂС‹
     public string GetRussianNaming() {
 
         string figureType = "";
 
         switch (type){
-            case FigureType.Cube: figureType = "Куб"; break;
-            case FigureType.Cylinder: figureType = "Цилиндр"; break;
-            case FigureType.Capsule: figureType = "Капсула"; break;
-            case FigureType.Sphere: figureType = "Сфера"; break;
+            case FigureType.Cube: figureType = "РљСѓР±"; break;
+            case FigureType.Cylinder: figureType = "Р¦РёР»РёРЅРґСЂ"; break;
+            case FigureType.Capsule: figureType = "РљР°РїСЃСѓР»Р°"; break;
+            case FigureType.Sphere: figureType = "РЎС„РµСЂР°"; break;
         }
 
         return figureType;
