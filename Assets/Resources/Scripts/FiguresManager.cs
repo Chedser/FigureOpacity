@@ -6,27 +6,27 @@ using UnityEngine.UI;
 public class FiguresManager : MonoBehaviour
 {
 
-    const int MAX_FIGURES_COUNT = 7; //маскимальное количество фигур в сцене
+    const int MAX_FIGURES_COUNT = 7; //РјР°СЃРєРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ С„РёРіСѓСЂ РІ СЃС†РµРЅРµ
 
-    public static Opacity currentOpacity; // Текущая непрозрачность
+    public static Opacity currentOpacity; // РўРµРєСѓС‰Р°СЏ РЅРµРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ
 
-    //Контейнер в меню фигур
+    //РљРѕРЅС‚РµР№РЅРµСЂ РІ РјРµРЅСЋ С„РёРіСѓСЂ
     [SerializeField]
     GameObject figureFieldContainer;
-    //Контейнер фигур-объектов
+    //РљРѕРЅС‚РµР№РЅРµСЂ С„РёРіСѓСЂ-РѕР±СЉРµРєС‚РѕРІ
     [SerializeField]
     GameObject figuresContainer;
 
     // Start is called before the first frame update
     void Awake()
     {
-        //Вызывается в Awake для обновления статического значения в случае перехода между сценами
+        //Р’С‹Р·С‹РІР°РµС‚СЃСЏ РІ Awake РґР»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃС‚Р°С‚РёС‡РµСЃРєРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РІ СЃР»СѓС‡Р°Рµ РїРµСЂРµС…РѕРґР° РјРµР¶РґСѓ СЃС†РµРЅР°РјРё
         currentOpacity = Opacity.FIVE;
-        //Создать элементы меню
+        //РЎРѕР·РґР°С‚СЊ СЌР»РµРјРµРЅС‚С‹ РјРµРЅСЋ
         CreateMenuFields();
     }
 
-    // Создание элементов меню фигур
+    // РЎРѕР·РґР°РЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РјРµРЅСЋ С„РёРіСѓСЂ
     void CreateMenuFields() {
 
         Figure[] figures = GetFiguresInScene();
@@ -35,15 +35,15 @@ public class FiguresManager : MonoBehaviour
 
         for (int i = 0; i < figures.Length; i++) {
             Figure figure = figures[i].GetComponent<Figure>();
-            string russianNaming = figures[i].GetRussianNaming(); //Русское название фигуры
+            string russianNaming = figures[i].GetRussianNaming(); //Р СѓСЃСЃРєРѕРµ РЅР°Р·РІР°РЅРёРµ С„РёРіСѓСЂС‹
 
-            //Поле фигуры в меню
+            //РџРѕР»Рµ С„РёРіСѓСЂС‹ РІ РјРµРЅСЋ
             Transform figureFieldTransform = figureFieldContainer.transform.GetChild(i);
-            //Устанавливаем русский текст в поле
+            //РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј СЂСѓСЃСЃРєРёР№ С‚РµРєСЃС‚ РІ РїРѕР»Рµ
             figureFieldTransform.GetComponentInChildren<Text>().text = russianNaming;
             figureFieldTransform.gameObject.SetActive(true);
 
-            //Скрипт логики работы поля меню для фигуры
+            //РЎРєСЂРёРїС‚ Р»РѕРіРёРєРё СЂР°Р±РѕС‚С‹ РїРѕР»СЏ РјРµРЅСЋ РґР»СЏ С„РёРіСѓСЂС‹
             FigureField figureFieldScript = figureFieldTransform.gameObject.GetComponent<FigureField>();
             figureFieldScript.AttachFigure(figure.gameObject);
 
@@ -51,7 +51,7 @@ public class FiguresManager : MonoBehaviour
 
     }
 
-    //Получить все фигуры в сцене
+    //РџРѕР»СѓС‡РёС‚СЊ РІСЃРµ С„РёРіСѓСЂС‹ РІ СЃС†РµРЅРµ
     Figure[] GetFiguresInScene() {
 
         return figuresContainer.GetComponentsInChildren<Figure>();
