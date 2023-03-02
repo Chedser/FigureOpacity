@@ -20,7 +20,7 @@ public class ShowButton : MonoBehaviour, IToggleable
         showButtonTop = GameObject.Find("EyeButtonTop");
     }
 
-    //Показываем/скрываем фигуру
+    //РџРѕРєР°Р·С‹РІР°РµРј/СЃРєСЂС‹РІР°РµРј С„РёРіСѓСЂСѓ
     public void ToggleFigure()
     {
         hideButton.SetActive(isClicked);
@@ -41,7 +41,7 @@ public class ShowButton : MonoBehaviour, IToggleable
         throw new System.NotImplementedException();
     }
 
-    //Вызывается через EyeButtonTop
+    //Р’С‹Р·С‹РІР°РµС‚СЃСЏ С‡РµСЂРµР· EyeButtonTop
     public void ToggleFigure(bool eyeBtnTopIsClicked)
     {
         if ((eyeBtnTopIsClicked && isClicked) || (!eyeBtnTopIsClicked && !isClicked)){return;} 
